@@ -1,0 +1,639 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: "Roboto";
+   
+}
+body p{
+    color: #555555;
+}
+header{
+
+    background-image: url('../images/hero\ img.jpg');
+    background-size: cover;
+    height:100vh;
+}
+.center{
+    text-align: center;
+}
+.slider{
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.nav-bar{
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.caption-header{
+    text-align: center;
+    color: aliceblue;
+    position: absolute;
+    top: 35%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+h1{
+    font-size: 70px;
+    color: #ff305b;
+    text-align: center;
+    margin: 0 0 0 10px;
+}
+.itms{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    padding: 0 15px ;
+
+
+}
+.itms ul{
+    margin-left: 40%;
+}
+.itms ul li a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0px;
+    padding: 10px;
+    position: relative;
+    top: 18px;
+    
+    
+}
+.itms ul li a:hover{
+    color:#ff305b;
+}
+.fokir{
+    padding: 0 15px;
+
+}
+.fokir a{
+    text-decoration: none;
+    color: #ff305b;
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 18px 0;
+    width: 20%;
+}
+.nav-bar li{
+    float: left;
+}
+li{
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+}
+.clr{
+    clear: both;
+}
+/* =================== header end =========================== */
+/* ============= animation text ============================ */
+.animated-text{
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 280px;
+    margin-top: 15px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "";
+    animation: words 10s infinite ;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 110%;
+    background-color: #2f354200;
+    border-left: 3px solid #fff;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #fff;
+    }
+}
+
+@keyframes words {
+    
+    0%,50%{
+        content: "Developer";
+    }
+    51%,100%{
+        content: "Designer";
+    }
+}
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+/* =========================About ============================== */
+section{
+    padding:5% 0;
+}
+.about-area {
+    padding: 100px 0 125px;
+  }
+  .about-photo,.about-caption{
+    width: 50%;
+    float: left;
+  }
+  div.about-photo {
+      width: 25%;  
+    border-radius: 5px;
+    box-shadow: 0 0 0 8px #555555 inset;
+    display: block;
+    margin-right: 0;
+    margin-top: 0;
+    position: relative;
+    margin-left:11% ;
+  }
+  div.about-caption {
+    padding-left: 5%;
+  }
+  div.my-photo{
+    width: 100%;
+    position: relative;
+    transform: translateY(24px) translateX(24px);
+  }
+  .hover {
+    background: rgba(0, 0, 0, 0.57);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    border-radius: 5px;
+
+  }
+  .my-photo:hover .hover {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
+  .my-photo img {
+    border-radius: 5px;
+    width: 100%;
+  }
+  .photo-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+          transform: translate(-50%, -50%);
+  }
+
+  .about-area .photo-icon li {
+      text-decoration: none;
+      
+  }
+  .about-area .photo-icon li a {
+    display: block;
+    font-size: 20px;
+    height: 20px;
+    width: 32px;
+    color: #fff;
+  }
+  .about-area .photo-icon li a:hover {
+    color: #ff305b;
+  }
+
+
+  .my-about ul {
+    display: table;
+    width: 100%;
+    overflow: auto;
+  }
+  .my-about ul li {
+    color: #555555;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 25px;
+    white-space: nowrap;
+  }
+  .my-about li a {
+    color: #7e7e7e;
+  }
+  .about-caption h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 25px;
+    padding-left: 13px;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .about-caption h2:after {
+    background: #ff305b none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+  }
+  .about-caption > p {
+    border-bottom: 1px dashed #999999;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+  }
+  .my-about ul li:nth-child(2n+1) {
+    float: left;
+    width: 39%;
+  }
+  .my-about ul li:nth-child(2n) {
+    float: left;
+    width: 60%;
+    margin-left:1% ;
+  }
+  .my-about span {
+    color: #333333;
+    font-weight: 500;
+  }
+  ul {
+    display: table;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+
+  .download-cv-btn li> a {
+    list-style: none;
+    text-decoration: none;
+    background: #ff305b;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px 24px;
+    transition: all 0.3s ease-in-out;
+  }
+  .download-cv-btn li> a:hover {
+    background: #EC2403
+  }
+  .download-cv-btn li> a i {
+    margin-left: 5px;
+  }
+/* =================== End about ============================*/
+/* ====================== service ========================== */
+.services {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 50px 0;
+}
+
+h2.section{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    position: relative;
+    text-transform: capitalize;
+}
+h2.section::after,
+h2.section::before{
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+h2.section::after{
+    background-color: #ff305b;
+    width: 160px;
+    bottom: 5px;
+    height: 1px;
+}
+h2.section::before{
+    border: solid  #ff305b;
+    border-width: 1px 0; 
+    bottom: 0;
+    padding: 4px 0 5px;
+    width: 70px;
+}
+.row i{
+    color: #ff305b;
+    font-size: 36px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.row h3{
+    font-size: 20;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.services .row{
+    margin: auto;
+    width: 90%;
+}
+.services .row div{
+    width: 22.5%;
+    padding: 40px 0;
+    margin-left: 2%;
+    float: left;
+    border-radius: 5px;
+}
+.services .row div:hover{
+    background-color: white;
+    opacity: 1.5;
+
+}
+.services .row div:hover i{
+    transform: scale(1.2);
+}
+/* ====================== end service ====================*/
+/* ===========================portfolio============================== */
+.buttom-por{
+    margin-bottom: 50px;
+}
+button{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 3px 12px;
+    position: relative;
+    text-transform: uppercase;
+}
+button:hover{
+    color: #ff305b;
+}
+.portfolio .conten{
+    /* background-color: #7e7e7e; */
+    width: 89%;
+    margin: auto;
+    overflow: auto;
+}
+.portfolio .conten .photo-por{
+    /* background-color: #c01e7d; */
+    width: 30.6%;
+    position: relative;
+    margin-left:2%;
+    margin-top:2% ;
+    float: left;
+    transition: all 1s ease;
+}
+.portfolio .conten .photo-por img{
+    width: 100%;
+    display: block;
+}
+.slider-por{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    opacity:0;
+    transition: all 0.4s ease 0s;
+    overflow: hidden;
+    color: white;
+}
+.photo-por:hover .slider-por{
+    opacity: 1;
+}
+.photo-por .slider-por i{
+    display: block;
+    font-size: 20px;
+    height: 20px;
+    width: 32px;
+    color: #ff305b;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+
+}
+/* ===================== end portfolio =================*/
+/* ======================== fun ================================= */
+
+.fun{
+    padding: 80px 0;
+    background-color: #f1f1f1;
+    overflow: auto;
+}
+.fun i{
+    color: #ff305b;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+.fun div{
+    text-align: center;
+    font-size: large;
+    /* background-color: aqua; */
+    width: 25%;
+    float: left;
+}
+.fun h3{
+    margin-bottom: 5px;
+    font-size: 26px;
+    font-weight: 800;
+}
+/* ================ end fun================ */
+ .testimonial{
+    margin: auto;
+    width: 50%;
+
+} 
+.i-img{
+    background: #f1f1f1 none repeat scroll 0 0;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 40px;
+    position: relative;
+    position: relative;
+}
+.i-img .cap{
+    /* position: relative;
+    left: 130px; */
+    padding-left: 130px;
+}
+.i-img:after {
+    border:solid 180px ;
+    border-color: #ff305b rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -180px;
+    z-index: 1
+}
+.i-img .img {
+    border-radius: 50%;
+    float: left;
+    margin: 12px auto;
+    overflow: hidden;
+    position: relative;
+    width: 110px;
+    z-index: 999;
+    
+} 
+.i-img .img img{
+    max-width: 100%;
+    height: auto;
+}
+.i-img .cap h3,.i-img .cap a,.i-img .cap p{
+    margin-bottom: 2%;
+
+
+}
+.i-img .cap p{
+    font-style: italic;
+    margin-bottom: 2%;
+
+}
+.i-img .i{
+    color: #f1c30d;
+}
+.i-img a{
+    text-decoration: none;
+    color: #333;
+
+    
+}
+/*================== end testimonial =====================*/
+/* ======================= blog ================================== */
+
+.img-blog{
+    background-color: white;
+    width:30.6%;
+    margin-left:2%;
+    float: left;
+}
+.img-blog img,iframe{
+    width: 100%;
+    display: block;
+}
+.blog .row{
+    /* background-color: #ec2403; */
+    width: 92%;
+    margin: auto;
+}
+.blog{
+    background-color: #f1f1f1
+}
+.img-blog .cap-blog{
+    background-color: #fff;
+    padding: 20px;
+}
+.cap-blog.frame{
+    position: relative;
+    top: 60px;
+}
+.img-blog p,h2{
+    margin-bottom:15px;
+}
+.img-blog a{
+    text-decoration: none;
+    color: black;
+}
+.img-blog a i{
+    color: black;
+    font-size: inherit;
+    margin-left: 5px;
+}
+input,textarea{
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* ============ end blog  ===============*/
+/* ======================== contact ================================= */
+
+.contact{
+    width: 60%;
+    margin: auto;
+
+}
+.l-input{
+    padding: 0 4%;
+}
+textarea{
+    width: 102%;
+    padding: 5px 5px 60px;
+    margin: 15px 0;
+}
+.i-input div{
+    /* background-color: #c01e7d; */
+    width: 42%;
+    float: left;
+    padding: 4%;
+}
+.contact button{
+    text-align: center;
+    background-color: #ff305b;
+    border:#ff305b ;
+    color: #ffffff;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 4%;
+}
+.contact button:hover{
+    background: #ec2403;
+    color: #ffffff;
+
+}
+/*================ end ==================*/
+footer{
+    background: #333333 none repeat scroll 0 0;
+    padding: 50px 0;
+    text-align: center;
+}
+footer a{
+    
+    color: #ff305b;
+    text-decoration: none;
+}
+.caption-foo ul{
+    position: relative;
+    left: 46%;
+    /* margin-left: 50%; */
+}
+.caption-foo ul li a {
+    color: #ffffff;
+    display: block;
+    height: 40px;
+    /* font-size: 18px; */
+    line-height: 40px;
+    padding: 0 10px;
+}
+.caption-foo li a:hover {
+    color: #ff305b;
+  }
+/* ========================= end footer ===================== */
+/* ========================================================= */
+
